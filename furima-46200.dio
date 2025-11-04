@@ -284,7 +284,7 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="183" value="address" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="105" y="900" width="195" height="206" as="geometry"/>
+                    <mxGeometry x="105" y="900" width="195" height="236" as="geometry"/>
                 </mxCell>
                 <mxCell id="184" value="postcode" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="183" vertex="1">
                     <mxGeometry y="26" width="195" height="30" as="geometry"/>
@@ -292,17 +292,20 @@
                 <mxCell id="185" value="region_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;fontColor=light-dark(#e40c0c, #ededed);" parent="183" vertex="1">
                     <mxGeometry y="56" width="195" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="196" value="house_number" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="183" vertex="1">
+                <mxCell id="224" value="local" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="183">
                     <mxGeometry y="86" width="195" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="198" value="building" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="183" vertex="1">
+                <mxCell id="196" value="house_number" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="183" vertex="1">
                     <mxGeometry y="116" width="195" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="199" value="phone_number" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="183" vertex="1">
+                <mxCell id="198" value="building" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="183" vertex="1">
                     <mxGeometry y="146" width="195" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="204" value="buyer_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;fontColor=light-dark(#e61919, #ededed);" parent="183" vertex="1">
+                <mxCell id="199" value="phone_number" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="183" vertex="1">
                     <mxGeometry y="176" width="195" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="204" value="buyer_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;fontColor=light-dark(#e61919, #ededed);" parent="183" vertex="1">
+                    <mxGeometry y="206" width="195" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="205" value="belongs_to:buyer" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
                     <mxGeometry x="105" y="1106" width="195" height="50" as="geometry"/>

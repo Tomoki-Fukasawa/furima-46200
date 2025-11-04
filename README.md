@@ -52,6 +52,7 @@
 |Column |Type |Options|
 |-------|-----|-------|
 |postcode|string|null:false|
+|local|string|null:false|
 |house_number|string|null:false|
 |building|string|
 |phone_number|string|null:false|
