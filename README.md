@@ -14,7 +14,7 @@
 
 ###Association
 -has_many :items
--has_many :buyer
+-has_many :buyers
 
 ## items table
 |Column |Type |Options|
@@ -45,7 +45,7 @@
 
 ###Association
 -belongs_to :user
--belongs_to :items
+-belongs_to :item
 -has_one :address
 
 ## addresses table
