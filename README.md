@@ -1,24 +1,64 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users table
+|Column |Type |Options|
+|-------|-----|-------|
+|nickname|string|null: false|
+|email|string| null: false, unique: true|
+|encrypted_password | string | null: false |
+|first_name_kanji|string|null:false|
+|last_name_kanji|string|null:false|
+|first_name_kana|string|null:false|
+|last_name_kana|string|null:false|
+|birth_day|date|null:false|
 
-Things you may want to cover:
+###Association
+-has_many :items
+-has_many :buyers
 
-* Ruby version
+## items table
+|Column |Type |Options|
+|-------|-----|-------|
 
-* System dependencies
+|item_name|string|null:false|
+|item_script|text|null:false|
+|category_id|integer|null: false|
+|item_state_id|integer|null: false|
+|deriver_pay_id|integer|null: false|
+|region_id|integer|null: false|
+|deriver_day_id|integer|null: false|
+|price|integer|null:false|
+|user|references|null: false, foreign_key|
 
-* Configuration
 
-* Database creation
+###Association
+-has_one:buyer
+-belongs_to:user
 
-* Database initialization
+-has_one_attached:item-image
 
-* How to run the test suite
+## buyers table
+|Column |Type |Options|
+|-------|-----|-------|
+|item|references| null: false, foreign_key|
+|user|references|null: false, foreign_key|
 
-* Services (job queues, cache servers, search engines, etc.)
+###Association
+-belongs_to :user
+-belongs_to :item
+-has_one :address
 
-* Deployment instructions
+## addresses table
+|Column |Type |Options|
+|-------|-----|-------|
+|postcode|string|null:false|
+|local|string|null:false|
+|house_number|string|null:false|
+|building|string|
+|phone_number|string|null:false|
+|buyer|references|null: false, foreign_key|
+|region_id|integer|null:false|
 
-* ...
+##Association
+-belongs_to :buyer
+
