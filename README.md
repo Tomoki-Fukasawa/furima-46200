@@ -14,7 +14,7 @@
 
 ###Association
 -has_many :items
--has_one :buyer
+-has_many :buyer
 
 ## items table
 |Column |Type |Options|
@@ -22,17 +22,17 @@
 
 |item_name|string|null:false|
 |item_script|text|null:false|
-|category|integer|null: false, foreign_key|
-|item_state|integer|null: false, foreign_key|
-|deriver_pay|integer|null: false, foreign_key|
-|region|integer|null: false, foreign_key|
-|deriver_day|integer|null: false, foreign_key|
+|category_id|integer|null: false|
+|item_state_id|integer|null: false|
+|deriver_pay_id|integer|null: false|
+|region_id|integer|null: false|
+|deriver_day_id|integer|null: false|
 |price|integer|null:false|
 |user|references|null: false, foreign_key|
 
 
 ###Association
--belongs_to:buyer
+-has_one:buyer
 -belongs_to:user
 
 -has_one_attached:item-image
@@ -45,18 +45,18 @@
 
 ###Association
 -belongs_to :user
--has_many :items
+-belongs_to :items
 -has_one :address
 
 ## addresses table
 |Column |Type |Options|
 |-------|-----|-------|
 |postcode|string|null:false|
-|house_number|integer|null:false|
-|building|text|
+|house_number|string|null:false|
+|building|string|
 |phone_number|string|null:false|
 |buyer|references|null: false, foreign_key|
-|region|integer|null:false,foreign_key|
+|region_id|integer|null:false|
 
 ##Association
 -belongs_to :buyer
