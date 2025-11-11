@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates_format_of :password, with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze, message: 'には英字と数字の両方を含めて設定してください' 
-  with_options presence: {message: 'を入力してください'} do
+  validates_format_of :password, with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'には英字と数字の両方を含めて設定してください'
+  with_options presence: { message: 'を入力してください' } do
     validates :nickname
     validates :first_name_kanji
     validates :last_name_kanji
