@@ -24,9 +24,9 @@
 |item_script|text|null:false|
 |category_id|integer|null: false|
 |item_state_id|integer|null: false|
-|deriver_pay_id|integer|null: false|
+|deliver_pay_id|integer|null: false|
 |region_id|integer|null: false|
-|deriver_day_id|integer|null: false|
+|deliver_day_id|integer|null: false|
 |price|integer|null:false|
 |user|references|null: false, foreign_key|
 

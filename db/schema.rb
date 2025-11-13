@@ -17,9 +17,9 @@ ActiveRecord::Schema[7.1].define(version: 2025_11_12_140920) do
     t.integer "price", null: false
     t.integer "category_id", null: false
     t.integer "item_state_id", null: false
-    t.integer "deriver_pay_id", null: false
+    t.integer "deliver_pay_id", null: false
     t.integer "region_id", null: false
-    t.integer "deriver_day_id", null: false
+    t.integer "deliver_day_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
