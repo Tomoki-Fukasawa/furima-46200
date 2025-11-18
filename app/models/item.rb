@@ -9,8 +9,6 @@ class Item < ApplicationRecord
   belongs_to :region
   belongs_to :deliver_day
   
-
-  
   with_options presence: { message: 'を入力してください'} do
     validates :item_name
     validates :item_script
