@@ -77,9 +77,9 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include('Price 300~9999999円の範囲で入力してください')
       end
       it 'priceに全角文字があると出品できない' do
-        @item.price="三百"
+        @item.price = '三百'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price 300~9999999円の範囲で入力してください")
+        expect(@item.errors.full_messages).to include('Price 300~9999999円の範囲で入力してください')
       end
       it 'userが紐づいていないと、出品できない' do
         @item.user = nil
