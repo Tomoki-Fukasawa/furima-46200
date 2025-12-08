@@ -1,18 +1,18 @@
 class BuyersController < ApplicationController
-  before_action :authenticate_user!, except: :index
+  before_action :authenticate_user!
+  before_action :set_item, only: [:index,:new,:create]
+  before_action :move_to_root, only: [:index]
+
   def index
     gon.public_key=ENV["PAYJP_PUBLIC_KEY"]
     @buyer_address = BuyerAddress.new
-    @item=Item.find(params[:item_id])
   end
 
   def new
-    @item=Item.find(params[:item_id])
     @buyer_address = BuyerAddress.new
   end
 
   def create
-    @item=Item.find(params[:item_id])
     @buyer_address=BuyerAddress.new(buyer_params)
     if @buyer_address.valid?
       pay_item
@@ -26,6 +26,10 @@ class BuyersController < ApplicationController
 
   private
 
+  def set_item
+    @item=Item.find(params[:item_id])
+  end
+
   def buyer_params
     params.require(:buyer_address).permit(:postcode, :region_id, :local, :house_number,:building, :phone_number).merge(user_id: current_user.id, item_id: params[:item_id],token: params[:token])
   end
@@ -37,6 +41,12 @@ class BuyersController < ApplicationController
       card: buyer_params[:token],  
       currency: 'jpy'              
     )
+  end
+
+  def move_to_root
+    return if (current_user.id != @item.user_id) && (@item.buyer.nil?)
+
+    redirect_to root_path
   end
 
 end
