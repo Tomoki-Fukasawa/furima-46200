@@ -78,9 +78,17 @@ group :production do
   gem 'pg'
 end
 
+gem 'pry'
+gem 'pry-rails'
+gem 'pry-byebug'
+
 gem 'devise'
 
 gem 'active_hash'
 
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
+
+gem 'payjp'
+
+gem 'gon'
