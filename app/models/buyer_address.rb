@@ -9,13 +9,12 @@ class BuyerAddress
     validates :phone_number,format:{ with: /\A\d{10,11}\z/, message: '半角数字だけで正しい文字数で入力してください'}
     validates :user_id
     validates :item_id
+    validates :token
   end
   
   with_options numericality: { other_than: 1, message: "can't be blank" } do
     validates :region_id
   end
-
-  validates :token, presence: true
 
   def save
     buyer=Buyer.create(user_id: user_id,item_id: item_id)

@@ -48,6 +48,11 @@ RSpec.describe BuyerAddress, type: :model do
         @buyer_address.valid?
         expect(@buyer_address.errors.full_messages).to include("Local can't be blank")
       end
+      it 'house_numberが空だと保存できない' do
+        @buyer_address.house_number=''
+        @buyer_address.valid?
+        expect(@buyer_address.errors.full_messages).to include("House number can't be blank")
+      end
       it 'phone_numberが空だと保存できない' do
         @buyer_address.phone_number=''
         @buyer_address.valid?
