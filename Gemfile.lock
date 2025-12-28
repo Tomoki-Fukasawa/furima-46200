@@ -207,7 +207,6 @@ GEM
     payjp (1.1.7)
       base64
       rest-client (~> 2.0)
-    pg (1.6.2-x86_64-linux)
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
@@ -387,7 +386,6 @@ DEPENDENCIES
   mysql2 (~> 0.5)
   nokogiri
   payjp
-  pg
   pry
   pry-byebug
   pry-rails
